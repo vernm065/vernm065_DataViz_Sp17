@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+.bar { fill: orange; }
+body{
+  max-width: 900px;
+  margin: 0px auto;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#container{
+  position: relative;
+}
+#sections{
+  width: 340px;
+}
+#sections > div{
+  background: white;
+  opacity: .2;
+  margin-bottom: 200px;
+}
+#sections > div:last-child{
+  margin-bottom: 30px;
+}
+#sections > div.graph-scroll-active{
+  opacity: 1;
+}
+#graph{
+  margin-left: 40px;
+  width: 500px;
+  position: absolute;
+  top: 0px;
+  margin-left: 380px;
+}
+.graph-scroll-fixed #graph{
+  position: fixed;
+  top: 0px;
+}
+.graph-scroll-below #graph{
+  bottom: 0px;
+  top: auto;
+}
+    @media (max-width: 925px)  {
+      #graph{
+        width: 100%;
+        transform: translate(-50%, 0);
+        margin-left: 50%;
+      }
+      #sections{
+        position: relative;
+        margin: 0px auto;
+        padding-top: 400px;
+      }
+      #sections div{
+        background: rgba(255,255,255,.5);
+        padding: 10px;
+        border: 1px solid;
+        max-width: 400px;
+        margin-bottom: 500px;
+      }
+    }
+    h1{
+      margin: 50px;
+    }
+    h1, h3{
+      text-align: center;
+    }
+    circle{
+      fill: red;
+    }
+    .mono{
+      font-family: monospace;
+    }
+    svg{
+      background-color: none;
+    }
+    </style>
+  </head>
+  <body>
+           <h3>Ebola Outbreak of 2014</h3>
+   The West African Ebola virus epidemic (2013-2016) was the most widespread outbreak of Ebola virus disease in history. The rapid infection caused major loss of life and socioeconomic disruption in the region.  Extreme poverty, dysfunctional healthcare systems, distrust of government after years of armed conflict, and the delay in responding for several months, all contributed to the failure to control the epidemic. Guinea, Liberia and Sierra Leone were hit hardest, racking up the highest causality rates in 2014/2015. <br><br><br><br><br><br><br><br>
+        
+
+    <div id='container'>
+      <div id='graph'></div>
+      <div id='sections'>
+        <div>
+          <h3>Early Stages</h3>
+          <span class='mono'>March 2014</span>
+    The first cases of the Ebola virus were detected in Guinea in December 2013. As months went on, the disease began to spread to neighboring Libera and Sierra Leone, resulting in a case fatality rate at slightly above 70%, while the rate among hospitalized patients was 57-59%.
+    <br><br>
+        </div>
+        
+
+        <div>
+          <h3>Causality Rates Increasing</h3>
+          <span class='mono'>August 2014</span>
+           In August 2014, the World Health Organization (WHO) had declared the outbreak "a public health emergency of international concern." 
+         <br><br>
+        </div>
+
+        <div>
+          <h3><h3 class="title">Rapid Infection Across West Africa</h3>
+          <span class='mono'>January 2015</span>
+            The United Nations had reported that the epidemic had moved to a second phase in January 2015. Around 100 cases were confirmed in Guinea, Liberia and Sirrea Leone in a matter of a week. With more and more cases being confirmed, the increasing causality rates from Ebola virus was well underway.
+         <br><br>
+        </div>
+
+          <div>
+          <h3><h3 class="title">Disease Under Control</h3>
+          <span class='mono'>June 2015</span>
+      By late June 2015, fewer and fewer cases were reported within the three countries.After substantial progress in reducing the scale of the epidemic with new vacines and medical practices, the WHO held a meeting to work out a "Comprehensive care plan for Ebola survivors" and identify research needed to optimize clinical care and social well-being.</div>
+
+      <div>
+      <h3><h3 class="title">Ebola-Free</h3>
+          <span class='mono'>December 2015</span>
+      As of December 2015, no new Ebola cases have been reported and the United Nations continues its efforts to care for the inhabitants of Guinea, Liberia and Sierra Leone.
+        <br><br><br><br><br><br>
+        </div>
+
+    </div> 
+     </div>
+    
+       
+    </div>
+  </body>
+    <script src="js/d3v4+jetpack.js"></script>
+    <script src="js/graph-scroll.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+</html>
